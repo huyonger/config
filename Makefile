@@ -1,10 +1,9 @@
 update:
-    git submodule foreach git pull
+	git submodule foreach git pull
 
 install: install-externals install-core
 
 install-core:
-
 	@echo "Core install tasks."
 	@echo "Backing up your .zshrc iff neccessary..."
 	@!(ls $(HOME)/.zshrc > /dev/null 2> /dev/null) || mv $(HOME)/.zshrc $(PWD)/zshrc.bak # Make backup of -zshrc if necessary
