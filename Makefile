@@ -16,6 +16,7 @@ install-core:
 	@cd autojump && ./install.py && cd ..
 	@echo "Backing up your .vimrc iff neccessary..."
 	@!(ls $(HOME)/.vimrc > /dev/null 2> /dev/null) || mv $(HOME)/.vimrc $(PWD)/vimrc.bak # Make backup of -vimrc if necessary
+	@ln -s $(PWD)/vimrc $(HOME)/.vimrc # update the link to .zshrc
 	@echo "DONE with core install tasks."
 
 install-externals:
