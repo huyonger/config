@@ -99,24 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # env of autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# env of nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# 自定义脚本
-source ~/config/alias.sh
-# 编辑器
-export EDITOR="/usr/local/bin/vim"
-
-# pnpm
-export PNPM_HOME="/Users/huyong/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-export http_proxy=http://127.0.0.1:7890/
-export https_proxy=http://127.0.0.1:7890/

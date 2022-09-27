@@ -110,7 +110,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # 自定义脚本
-source ~/config/alias.sh
+source ~/config/mac/alias.sh
 # 编辑器
 export EDITOR="/usr/local/bin/vim"
 
