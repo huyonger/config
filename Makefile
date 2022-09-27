@@ -10,10 +10,10 @@ install-core:
 	@echo "Install oh-my-zsh..."
 	@ln -s $(PWD)/zshrc $(HOME)/.zshrc # update the link to .zshrc
 	@ln -s $(PWD)/ohmyzsh $(HOME)/.oh-my-zsh
-	@ln -s $(PWD)/ohmyzsh/custom/plugins/zsh-syntax-highlighting $(HOME)/zsh-syntax-highlighting
-	@ln -s $(PWD)/ohmyzsh/custom/plugins/zsh-autosuggestions $(HOME)/zsh-autosuggestions
-	@ln -s $(PWD)/ohmyzsh/custom/plugins/autojump $(HOME)/autojump
-	@python $(PWD)/ohmyzsh/custom/plugins/autojump/install.py
+	@ln -s $(PWD)/ohmyzsh/custom/plugins/zsh-syntax-highlighting $(PWD)/zsh-syntax-highlighting
+	@ln -s $(PWD)/ohmyzsh/custom/plugins/zsh-autosuggestions $(PWD)/zsh-autosuggestions
+	@ln -s $(PWD)/ohmyzsh/custom/plugins/autojump $(PWD)/autojump
+	@python $(PWD)/autojump/install.py
 	@echo "Backing up your .vimrc iff neccessary..."
 	@!(ls $(HOME)/.vimrc > /dev/null 2> /dev/null) || mv $(HOME)/.vimrc $(PWD)/vimrc.bak # Make backup of -vimrc if necessary
 	@echo "DONE with core install tasks."
