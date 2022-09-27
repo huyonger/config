@@ -6,6 +6,8 @@
 
 ## 加速连接
 
+submodule 下面包下载较慢，可以手动`git clone `下面链接。
+
 -   https://github.91chi.fun/https://github.com/wting/autojump.git
 -   https://github.91chi.fun/https://github.com/zsh-users/zsh-autosuggestions.git
 -   https://github.91chi.fun/https://github.com/zsh-users/zsh-syntax-highlighting.git

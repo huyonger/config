@@ -13,7 +13,7 @@ install-core:
 	@ln -s $(PWD)/zsh-syntax-highlighting $(PWD)/ohmyzsh/custom/plugins/zsh-syntax-highlighting 
 	@ln -s $(PWD)/zsh-autosuggestions $(PWD)/ohmyzsh/custom/plugins/zsh-autosuggestions 
 	@ln -s $(PWD)/autojump $(PWD)/ohmyzsh/custom/plugins/autojump 
-	@python $(PWD)/autojump/install.py
+	@cd autojump && ./install.py && cd ..
 	@echo "Backing up your .vimrc iff neccessary..."
 	@!(ls $(HOME)/.vimrc > /dev/null 2> /dev/null) || mv $(HOME)/.vimrc $(PWD)/vimrc.bak # Make backup of -vimrc if necessary
 	@echo "DONE with core install tasks."
