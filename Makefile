@@ -17,7 +17,11 @@ install-core:
 	@echo "Backing up your .vimrc iff neccessary..."
 	@!(ls $(HOME)/.vimrc > /dev/null 2> /dev/null) || mv $(HOME)/.vimrc $(PWD)/vimrc.bak # Make backup of -vimrc if necessary
 	@ln -s $(PWD)/vimrc $(HOME)/.vimrc # update the link to .zshrc
+	@echo "Install vim-plug..."
+	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@echo "DONE with core install tasks."
+	@echo "use vim-plug manager PlugInstall command to install plugins"
 
 install-externals:
 	git submodule update --init

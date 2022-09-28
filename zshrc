@@ -103,4 +103,16 @@ source $ZSH/oh-my-zsh.sh
 # env of autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+function proxy_off() {
+    unset http_proxy
+    unset https_proxy
+    unset no_proxy
+    echo -e "Proxy Off"
+}
 
+function proxy_on(){
+    export http_proxy="http://127.0.0.1:7890"
+    export https_proxy=$http_proxy
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    echo -e "Proxy On"
+}

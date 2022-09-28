@@ -12,3 +12,8 @@ submodule 下面包下载较慢，可以手动`git clone `下面链接。
 -   https://github.91chi.fun/https://github.com/zsh-users/zsh-autosuggestions.git
 -   https://github.91chi.fun/https://github.com/zsh-users/zsh-syntax-highlighting.git
 -   https://github.91chi.fun/https://github.com/ohmyzsh/ohmyzsh.git
+
+## 安装
+
+1. 执行`make install`。
+2. vim 中执行`:PlugInstall`。

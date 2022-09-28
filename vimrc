@@ -60,8 +60,9 @@ Plug 'preservim/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-
 call plug#end()
+
+set fileencodings=ucs-bom,utf-8,gbk,gb2312,cp936,gb18030,big5,latin-1
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
