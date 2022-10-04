@@ -1,0 +1,18 @@
+#!/bin/bash
+cd /root
+if [ ! -d "waline" ]; then
+  git clone https://gitee.com/huyonger/waline.git
+fi
+
+cd waline
+git clean -f
+git checkout .
+git pull
+pnpm install
+pm2 startOrReload pm2.json
+
+if [ -f "/etc/nginx/conf.d/waline.conf" ]; then
+  rm /etc/nginx/conf.d/waline.conf
+fi
+ln -s /root/waline/nginx.conf /etc/nginx/conf.d/waline.conf
+systemctl restart nginx
