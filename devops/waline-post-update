@@ -11,8 +11,8 @@ git pull
 pnpm install
 pm2 startOrReload pm2.json
 
-if [ -f "/etc/nginx/conf.d/waline.conf" ]; then
-  rm /etc/nginx/conf.d/waline.conf
+if [ -f "/usr/local/nginx/conf/conf.d/waline.conf" ]; then
+  rm /usr/local/nginx/conf/conf.d/waline.conf
 fi
-ln -s /root/waline/nginx.conf /etc/nginx/conf.d/waline.conf
+ln -s /root/waline/nginx.conf /usr/local/nginx/conf/conf.d/waline.conf
 systemctl restart nginx

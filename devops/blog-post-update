@@ -13,12 +13,12 @@ pip3 install -r requirements.txt
 npm run webpack.build.production
 pm2 startOrReload pm2.json
 
-if [ -f "/etc/nginx/conf.d/blog.conf" ]; then
-  rm /etc/nginx/conf.d/blog.conf
+if [ -f "/usr/local/nginx/conf/conf.d/blog.conf" ]; then
+  rm /usr/local/nginx/conf/conf.d/blog.conf
 fi
-ln -s /root/blog/nginx.conf /etc/nginx/conf.d/blog.conf
-if [ -f "/etc/nginx/conf.d/blog_https.conf" ]; then
-  rm /etc/nginx/conf.d/blog_https.conf
+ln -s /root/blog/nginx.conf /usr/local/nginx/conf/conf.d/blog.conf
+if [ -f "/usr/local/nginx/conf/conf.d/blog_https.conf" ]; then
+  rm /usr/local/nginx/conf/conf.d/blog_https.conf
 fi
-ln -s /root/blog/nginx_https.conf /etc/nginx/conf.d/blog_https.conf
+ln -s /root/blog/nginx_https.conf /usr/local/nginx/conf/conf.d/blog_https.conf
 systemctl restart nginx
