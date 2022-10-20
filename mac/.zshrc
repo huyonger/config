@@ -120,3 +120,9 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 export http_proxy=http://127.0.0.1:7890/
 export https_proxy=http://127.0.0.1:7890/
+# go env
+export GOPROXY=https://proxy.golang.com.cn,direct
+# maven
+export M2_HOME=/usr/local/apache-maven-3.8.6
+export PATH=${PATH}:${M2_HOME}/bin
+
