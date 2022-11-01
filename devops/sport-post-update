@@ -1,0 +1,19 @@
+#!/bin/bash
+cd /root
+if [ ! -d "CryptoWorldCup" ]; then
+  git clone git@github.com:Web3DAOProfit/web3-sport-game-fe.git CryptoWorldCup
+fi
+
+cd CryptoWorldCup
+git clean -f
+git checkout .
+git pull
+yarn install
+yarn build
+
+if [ -f "/usr/local/nginx/conf/conf.d/sport.conf" ]; then
+  rm /usr/local/nginx/conf/conf.d/sport.conf
+fi
+
+ln -s /root/CryptoWorldCup/nginx.conf /usr/local/nginx/conf/conf.d/sport.conf
+systemctl restart nginx
